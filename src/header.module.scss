@@ -1,0 +1,75 @@
+$mercury-color: #419EBB;
+$venus-color: #EDA249;
+$earth-color: #6D2ED5;
+$mars-color:#D14C32;
+$jupiter-color:#D83A34;
+$saturn-color:#D83A34;
+$uranus-color:#1EC1A2;
+$neptun-color:#2D68F0;
+
+header{
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    h1{
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 36px;
+        color: #FFFFFF;
+        font-family: 'Antonio';
+        font-style: normal;
+        font-weight: 400;
+    }
+    .menuIcon{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        .line{
+            width: 24px;
+            height: 3px;
+            background-color: white;
+        }
+    }
+};
+.menuPop{
+    padding: 24px 24px 67px 24px;
+    z-index: 2;
+    background-color: #070724;
+    height: 100vh;
+    li{
+        list-style: none;
+        display: flex;
+        padding-bottom: 23px;
+        padding: 20px 0;
+        a{
+            width: 100%;
+            color: white;
+            font-family: 'Spartan';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 25px;
+            letter-spacing: 1.36364px;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .wrapperLi{
+            display: flex;
+            .circle{
+                width: 20px;
+                height: 20px;
+                background-color: white;
+                margin-right: 25px;
+                border-radius: 50%;
+            }
+        }
+       
+    }
+
+}
