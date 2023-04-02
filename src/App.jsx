@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./App.module.scss";
 import { Link, Route, Routes, Navigate } from "react-router-dom";
-import Planet from "./pages/planet";
+import Planet from "./pages/Planet";
 import Header from "./Header";
 
 function App() {
