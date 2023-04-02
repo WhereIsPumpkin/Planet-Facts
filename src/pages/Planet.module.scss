@@ -1,0 +1,45 @@
+.sideMenu{
+    display: flex;
+    padding: 20px 24px;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    .menuElement{
+        color: white;
+        opacity: 0.5;
+        font-family: 'Spartan';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 9px;
+        line-height: 10px;
+        letter-spacing: 1.92857px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    .selected{
+        opacity: 1;
+    }
+}
+.mainPage{
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px 47px 24px;
+    .infoSection{
+        display: flex;
+        flex-direction: column;
+        .nameDescription{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            p{
+                margin-bottom: 32px;
+                margin-top: 16px;
+            }
+            h1,
+            p,
+            span{
+                color: white;
+            }
+        }
+    }
+}

@@ -3,30 +3,35 @@ import styles from "./header.module.scss"
 import arrow from "./assets/icon-chevron.svg"
 import { Link, Route, Routes } from "react-router-dom";
 
-const planetColors = {
-  mercury: '#419EBB',
-  venus: '#EDA249',
-  earth: '#6D2ED5',
-  mars: '#D14C32',
-  jupiter: '#D83A34',
-  saturn: '#D83A34',
-  uranus: '#1EC1A2',
-  neptune: '#2D68F0'
-};
+
 
 export default function Header() {
+
   const [showMenu, setShowMenu] = useState(false);
+  
+  const planetColors = {
+    mercury: '#DEF4FC',
+    venus: '#F7CC7F',
+    earth: '#545BFE',
+    mars: '#FF6A45',
+    jupiter: '#ECAD7A',
+    saturn: '#FCCB6B',
+    uranus: '#65F0D5',
+    neptune: '#497EFA'
+  };
 
   return (
     <>
+
       <header>
         <h1>THE PLANETS</h1>
 
-        <div className={styles.menuIcon} onClick={() => setShowMenu(!showMenu)} >
+        <div className={styles.menuIcon} onClick={() => setShowMenu(!showMenu)} style={{ opacity: showMenu ? 0.2 : 1 }}>
           <div className={styles.line}></div>
           <div className={styles.line}></div>
           <div className={styles.line}></div>
         </div>
+        
       </header>
 
       {showMenu && (
@@ -44,6 +49,8 @@ export default function Header() {
         ))}
       </ul>
       )}
+
     </>
   );
+
 }
