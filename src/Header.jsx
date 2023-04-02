@@ -37,8 +37,9 @@ export default function Header() {
       {showMenu && (
         <ul className={styles.menuPop} >
         {data.map((planet) => (
-          <li key={planet.name}>
-            <Link to={`/planets/${planet.name.toLowerCase()}`}>
+          <li key={planet.name}
+          onClick={() => setShowMenu(!showMenu)} >
+            <Link to={`/planets/${planet.name.toLowerCase()}/overview`}>
               <div className={styles.wrapperLi}>
                 <div className={styles.circle} style={{ backgroundColor: planetColors[planet.name.toLowerCase()] }}></div>
                 {planet.name}

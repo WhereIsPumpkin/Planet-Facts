@@ -26,20 +26,95 @@
     .infoSection{
         display: flex;
         flex-direction: column;
+        .imgWrapper{
+            padding: 24px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                width: 70%;
+                height: 70%;
+            }
+        }
         .nameDescription{
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
+            h1{
+                font-family: 'Antonio';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 40px;
+                line-height: 52px;
+                text-align: center;
+                text-transform: uppercase;
+                color: white;
+            }
             p{
                 margin-bottom: 32px;
                 margin-top: 16px;
+                font-weight: 400;
+                font-size: 11px;
+                line-height: 22px;
+                text-align: center;
+                color: #FFFFFF;
+                font-family: 'Spartan';
             }
-            h1,
-            p,
             span{
-                color: white;
+                font-family: 'Spartan';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 25px;
+                color: #FFFFFF;
+                mix-blend-mode: normal;
+                opacity: 0.5;
+                display: flex;
+                gap: 4px;
+                a{
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                }
             }
+        }
+    }
+    .basicInfo{
+        display: flex;
+        flex-direction: column;
+        margin-top: 28px;
+        gap: 8px;
+        .Component{
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            height: 48px;
+            display: flex;
+            align-items: center;
+            padding: 0 24px;
+            justify-content: space-between;
+        }
+        h2{
+            font-family: 'Spartan';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 8px;
+            line-height: 16px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            mix-blend-mode: normal;
+            opacity: 0.5;
+        }
+        span{
+            font-family: 'Antonio';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 26px;
+            text-align: right;
+            letter-spacing: -0.75px;
+            text-transform: uppercase;
+            color: #FFFFFF;
         }
     }
 }
