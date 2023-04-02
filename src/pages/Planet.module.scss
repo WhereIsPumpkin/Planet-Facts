@@ -31,9 +31,17 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            position: relative;
             img{
                 width: 70%;
                 height: 70%;
+            }
+            .geology{
+                position: absolute;
+                top: 60%;
+                left: 38%;
+                width: 78.3px;
+                height: 96px;
             }
         }
         .nameDescription{

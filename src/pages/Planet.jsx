@@ -66,11 +66,18 @@ export default function Planet() {
                   : menu === "structure"
                   ? planetData.images.internal
                   : menu === "surface"
-                  ? planetData.images.geology
+                  ? planetData.images.planet
                   : null
               }
               alt={`${planetData.name} planet`}
             />
+             {menu === "surface" && (
+          <img
+            src={planetData.images.geology}
+            alt={`${planetData.name} geology`}
+            className={styles.geology}
+          />
+        )}
             </div>
 
             <div className={styles.nameDescription}>
