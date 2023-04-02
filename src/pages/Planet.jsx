@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import data from "../data.json";
-import styles from "./planet.module.scss";
+import styles from "./Planet.module.scss";
 
 export default function Planet() {
   const { name, menu } = useParams();
