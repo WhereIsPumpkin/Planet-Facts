@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import data from "../data.json";
 import styles from "./Planet.module.scss";
@@ -10,7 +10,16 @@ export default function Planet() {
     (planet) => planet.name.toLowerCase() === name.toLowerCase()
   );
 
-  const [activeLink,setActiveLink] = useState('');
+  const [activeLink,setActiveLink] = useState('overview');
+
+
+  useEffect(() => {
+  const linkParts = window.location.pathname.split("/");
+  const planetName = linkParts[3];
+  if (planetName !== activeLink) {
+    setActiveLink("overview");
+  }
+}, [window.location.pathname]);
 
   console.log(planetData.images.planet);
   let content;
@@ -175,7 +184,7 @@ export default function Planet() {
               </div>
 
             </div>
-            
+
           </div>
         ) : (
           <p>Planet not found</p>
