@@ -20,19 +20,33 @@ export default function Header() {
 
   return (
     <>
-      <header>
-        <h1>THE PLANETS</h1>
-
-        <div
-          className={styles.menuIcon}
-          onClick={() => setShowMenu(!showMenu)}
-          style={{ opacity: showMenu ? 0.2 : 1 }}
-        >
-          <div className={styles.line}></div>
-          <div className={styles.line}></div>
-          <div className={styles.line}></div>
+      <div className={styles.headerWrap}>
+        
+        <header>
+          <h1>THE PLANETS</h1>
+  
+          <div
+            className={styles.menuIcon}
+            onClick={() => setShowMenu(!showMenu)}
+            style={{ opacity: showMenu ? 0.2 : 1 }}
+          >
+            <div className={styles.line}></div>
+            <div className={styles.line}></div>
+            <div className={styles.line}></div>
+          </div>
+        </header>
+  
+        <div className={styles.planetList}>
+          {data.map((planet) => (
+            <div key={planet.name} className={styles.planetBlock}>
+              <Link to={`/planets/${planet.name.toLowerCase()}/overview`}>
+                <span>{planet.name}</span>
+              </Link>
+            </div>
+          ))}
         </div>
-      </header>
+  
+        </div>
 
       {showMenu && (
         <ul className={styles.menuPop}>
@@ -55,15 +69,6 @@ export default function Header() {
         </ul>
       )}
 
-      <div className={styles.planetList}>
-        {data.map((planet) => (
-          <div key={planet.name} className={styles.planetBlock}>
-            <Link to={`/planets/${planet.name.toLowerCase()}/overview`}>
-              <span>{planet.name}</span>
-            </Link>
-          </div>
-        ))}
-      </div>
     </>
   );
 }
