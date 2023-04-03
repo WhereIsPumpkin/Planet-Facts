@@ -1,128 +1,214 @@
-.sideMenu{
-    display: flex;
-    padding: 20px 24px;
-    justify-content: space-between;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    .menuElement{
-        color: white;
-        opacity: 0.5;
-        font-family: 'Spartan';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 9px;
-        line-height: 10px;
-        letter-spacing: 1.92857px;
-        text-transform: uppercase;
-        text-decoration: none;
-    }
-    .selected{
-        opacity: 1;
-    }
+.sideMenu {
+  display: flex;
+  padding: 20px 24px;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  .menuElement {
+    color: white;
+    opacity: 0.5;
+    font-family: "Spartan";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 10px;
+    letter-spacing: 1.92857px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .selected {
+    opacity: 1;
+  }
 }
-.mainPage{
+.mainPage {
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px 47px 24px;
+  .infoSection {
     display: flex;
     flex-direction: column;
-    padding: 0 24px 47px 24px;
-    .infoSection{
-        display: flex;
-        flex-direction: column;
-        .imgWrapper{
-            padding: 24px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            img{
-                width: 70%;
-                height: 70%;
-            }
-            .geology{
-                position: absolute;
-                top: 60%;
-                left: 38%;
-                width: 78.3px;
-                height: 96px;
-            }
-        }
-        .nameDescription{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            h1{
-                font-family: 'Antonio';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 40px;
-                line-height: 52px;
-                text-align: center;
-                text-transform: uppercase;
-                color: white;
-            }
-            p{
-                margin-bottom: 32px;
-                margin-top: 16px;
-                font-weight: 400;
-                font-size: 11px;
-                line-height: 22px;
-                text-align: center;
-                color: #FFFFFF;
-                font-family: 'Spartan';
-            }
-            span{
-                font-family: 'Spartan';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 12px;
-                line-height: 25px;
-                color: #FFFFFF;
-                mix-blend-mode: normal;
-                opacity: 0.5;
-                display: flex;
-                gap: 4px;
-                a{
-                    color: white;
-                    display: flex;
-                    align-items: center;
-                    gap: 4px;
-                }
-            }
-        }
+    .imgWrapper {
+      padding: 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      img {
+        width: 70%;
+        height: 70%;
+      }
+      .geology {
+        position: absolute;
+        top: 60%;
+        left: 38%;
+        width: 78.3px;
+        height: 96px;
+      }
     }
-    .basicInfo{
+    .nameDescription {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      h1 {
+        font-family: "Antonio";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 52px;
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+      }
+      p {
+        margin-bottom: 32px;
+        margin-top: 16px;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 22px;
+        text-align: center;
+        color: #ffffff;
+        font-family: "Spartan";
+      }
+      span {
+        font-family: "Spartan";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 25px;
+        color: #ffffff;
+        mix-blend-mode: normal;
+        opacity: 0.5;
         display: flex;
-        flex-direction: column;
-        margin-top: 28px;
-        gap: 8px;
-        .Component{
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            height: 48px;
-            display: flex;
-            align-items: center;
-            padding: 0 24px;
-            justify-content: space-between;
+        gap: 4px;
+        a {
+          color: white;
+          display: flex;
+          align-items: center;
+          gap: 4px;
         }
-        h2{
-            font-family: 'Spartan';
+      }
+    }
+    .tabletMenu{
+        display: none;
+    }
+  }
+  .basicInfo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 28px;
+    gap: 8px;
+    .Component {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      height: 48px;
+      display: flex;
+      align-items: center;
+      padding: 0 24px;
+      justify-content: space-between;
+    }
+    h2 {
+      font-family: "Spartan";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 8px;
+      line-height: 16px;
+      text-transform: uppercase;
+      color: #ffffff;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+    }
+    span {
+      font-family: "Antonio";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 26px;
+      text-align: right;
+      letter-spacing: -0.75px;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sideMenu {
+    display: none;
+  }
+  .mainPage {
+    padding: 0 40px 29px 40px;
+    .infoSection {
+      .imgWrapper {
+        padding-top: 27px;
+        img {
+          max-width: 422px;
+          max-height: 422px;
+        }
+      }
+      .infoSectionWrapper {
+        display: flex;
+        gap: 69px;
+        align-items: center;
+        .nameDescription {
+          text-align: unset;
+          align-items: unset;
+          max-width: 339px;
+          h1 {
+            text-align: unset;
+            font-size: 48px;
+          }
+          p {
+            text-align: unset;
+            font-size: 11px;
+            margin-top: 24px;
+            margin-bottom: 32px;
+          }
+        }
+        .tabletMenu {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          span{
+            font-family: "Spartan";
             font-style: normal;
             font-weight: 700;
-            font-size: 8px;
-            line-height: 16px;
+            font-size: 9px;
+            line-height: 25px;
+            letter-spacing: 1.92857px;
             text-transform: uppercase;
-            color: #FFFFFF;
+            color: #ffffff;
             mix-blend-mode: normal;
             opacity: 0.5;
-        }
-        span{
-            font-family: 'Antonio';
+            margin-right: 16px;
+          }
+          a{
+            width: 281px;
+            padding: 8px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-family: "Spartan";
             font-style: normal;
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 26px;
-            text-align: right;
-            letter-spacing: -0.75px;
+            font-weight: 700;
+            font-size: 9px;
+            line-height: 25px;
+            letter-spacing: 1.92857px;
             text-transform: uppercase;
-            color: #FFFFFF;
+            color: #ffffff;
+            text-decoration: none;
+          }
+          .active{
+            background: #CD5120;
+          }
+        }
+      }
+      .basicInfo{
+        flex-direction: row;
+        justify-content: space-between;
+        .Component{
+            flex-direction: column;
+            gap: 6px;
+            padding: 16px 60px 19px 15px;
+            height: unset;
         }
     }
+    }
+  }
 }

@@ -1,74 +1,109 @@
-$mercury-color: #419EBB;
-$venus-color: #EDA249;
-$earth-color: #6D2ED5;
-$mars-color:#D14C32;
-$jupiter-color:#D83A34;
-$saturn-color:#D83A34;
-$uranus-color:#1EC1A2;
-$neptun-color:#2D68F0;
+$mercury-color: #419ebb;
+$venus-color: #eda249;
+$earth-color: #6d2ed5;
+$mars-color: #d14c32;
+$jupiter-color: #d83a34;
+$saturn-color: #d83a34;
+$uranus-color: #1ec1a2;
+$neptun-color: #2d68f0;
 
-header{
-    padding: 16px 24px;
+header {
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  h1 {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 36px;
+    color: #ffffff;
+    font-family: "Antonio";
+    font-style: normal;
+    font-weight: 400;
+  }
+  .menuIcon {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    h1{
-        font-weight: 400;
-        font-size: 28px;
-        line-height: 36px;
-        color: #FFFFFF;
-        font-family: 'Antonio';
-        font-style: normal;
-        font-weight: 400;
+    flex-direction: column;
+    gap: 4px;
+    .line {
+      width: 24px;
+      height: 3px;
+      background-color: white;
     }
-    .menuIcon{
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        .line{
-            width: 24px;
-            height: 3px;
-            background-color: white;
-        }
+  }
+}
+.menuPop {
+  padding: 24px 24px 67px 24px;
+  z-index: 2;
+  background-color: #070724;
+  height: 100vh;
+  li {
+    list-style: none;
+    display: flex;
+    padding-bottom: 23px;
+    padding: 20px 0;
+    a {
+      width: 100%;
+      color: white;
+      font-family: "Spartan";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 25px;
+      letter-spacing: 1.36364px;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      align-items: center;
     }
-};
-.menuPop{
-    padding: 24px 24px 67px 24px;
-    z-index: 2;
-    background-color: #070724;
-    height: 100vh;
-    li{
-        list-style: none;
-        display: flex;
-        padding-bottom: 23px;
-        padding: 20px 0;
-        a{
-            width: 100%;
-            color: white;
-            font-family: 'Spartan';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 15px;
-            line-height: 25px;
-            letter-spacing: 1.36364px;
-            text-transform: uppercase;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .wrapperLi{
-            display: flex;
-            .circle{
-                width: 20px;
-                height: 20px;
-                margin-right: 25px;
-                border-radius: 50%;
-            }
-        }
-       
+    .wrapperLi {
+      display: flex;
+      .circle {
+        width: 20px;
+        height: 20px;
+        margin-right: 25px;
+        border-radius: 50%;
+      }
     }
+  }
+}
+.planetList {
+  display: none;
+}
 
+@media screen and (min-width: 768px) {
+  header {
+    justify-content: center;
+    border-bottom: 0;
+    padding-top: 32px;
+    padding-bottom: 0;
+    margin-bottom: 39px;
+    .menuIcon {
+      display: none;
+    }
+  }
+  .planetList {
+    display: flex;
+    padding: 0 51px;
+    justify-content: space-between;
+    padding-bottom: 27px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    .planetBlock {
+      a {
+        text-decoration: none;
+        font-family: "Spartan";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 11px;
+        line-height: 25px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #ffffff;
+        opacity: 0.8;
+      }
+    }
+  }
 }
